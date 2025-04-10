@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/repo-junias/assets/ONT2-2v1IwyaB.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- start css link -->
+    <!-- end css link -->
+
+    
+    
+    <!-- =====font awsome====== -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+     <!-- ========  three.js ======= -->
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.174.0/three.tsl.js" integrity="sha512-kLVG+9hRPzp61ceEI5/hoRsQmEV9cFf4r4DOCYIBPteqgaTB6awXLAZlWUO5Dvlisok4doFjnxs75mngpXI35w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+   
+    <style>
+      .hero-slider {
+        position: relative;
+        height: 100vh;
+      }  .swiper-slide video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }  .slide-content {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-align: center;
+        z-index: 10;
+        max-width: 800px;
+        width: 90%;
+      }  .slide-caption {
+        background: rgba(0,0,0,0.5);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }  .controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }  .pause-btn {
+        background: none;
+        border: 2px solid white;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }  .pause-btn:hover {
+        background: rgba(255,255,255,0.2);
+      }
+    </style>
+  <script type="module" crossorigin src="/repo-junias/assets/index-BPS6ONQ0.js"></script>
+  <link rel="stylesheet" crossorigin href="/repo-junias/assets/index-Dxu7Xic9.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-cotainer">         
+                 <div class="logo">
+                 <div class="logo-adjuster">
+                    <img src="/repo-junias/assets/ONT6-Bq4ixRpV.svg" alt="" class="logo-img">
+                 </div>
+              </div>              <div class="nav">
+                 <div class="nav-top">
+                    <div class="nav-top_left">
+                        <span>junias@gmail.com</span>
+                        <span>+243 991785496</span>
+                        
+                    </div>
+                    <div class="nav-top_right">
+                        <span><i class="fa-brands fa-facebook-f"></i></span>
+                        <span><i class="fa-brands fa-x-twitter"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                 </div>
+                 <div class="nav-bottom">
+                    <div class="nav-bottom-menu">
+                        <di class="nav-bottom-menu-container">
+                            <div class="close-menu">
+                                <span>x</span>
+                            </div>
+                            <div class="nav-menu">
+                            <div class="menu">
+                                <ul class="menu-lists">
+                                    <li class="menu-list">
+                                        <a href="" class="menu-link">Accueil</a>
+                                        <span><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20511.42%20252.63'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3ejunicon%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Bold'%3e%3cpath%20class='cls-1'%20d='M32,0A32,32,0,0,1,54.63,9.39L218.3,173.06a53.33,53.33,0,0,0,75.42,0h0L457.19,9.6a32,32,0,0,1,45.25,45.25L339.11,218.3a117.45,117.45,0,0,1-166,0L9.38,54.63A32,32,0,0,1,32,0Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></span>
+                                    </li>
+                                    <li class="menu-list">
+                                        <a href="" class="menu-link">Office</a>
+                                        <span><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20511.42%20252.63'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3ejunicon%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Bold'%3e%3cpath%20class='cls-1'%20d='M32,0A32,32,0,0,1,54.63,9.39L218.3,173.06a53.33,53.33,0,0,0,75.42,0h0L457.19,9.6a32,32,0,0,1,45.25,45.25L339.11,218.3a117.45,117.45,0,0,1-166,0L9.38,54.63A32,32,0,0,1,32,0Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></span>
+                                        <div class="menu-drop-down">
+                                            <ul class="menu-drop-down-lists">
+                                                <li class="menu-drop-down-list">
+                                                    <i class="fi fi-rr-arrow-small-right"></i> <a href="cadre-organique.html" class="menu-drop-down-link">Cadre Organique</a>
+                                                </li>
+
+                                                <li class="menu-drop-down-list">
+                                                    <i class="fi fi-rr-arrow-small-right"></i> <a href="office-direction.html" class="menu-drop-down-link">Directions</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="menu-list">
+                                        <a href="" class="menu-link">Ressources</a>
+                                        <span><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20511.42%20252.63'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3ejunicon%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Bold'%3e%3cpath%20class='cls-1'%20d='M32,0A32,32,0,0,1,54.63,9.39L218.3,173.06a53.33,53.33,0,0,0,75.42,0h0L457.19,9.6a32,32,0,0,1,45.25,45.25L339.11,218.3a117.45,117.45,0,0,1-166,0L9.38,54.63A32,32,0,0,1,32,0Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></span>
+                                    </li>
+                                    <li class="menu-list">
+                                        <a href="" class="menu-link">Projets</a>
+                                        <span><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20511.42%20252.63'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3ejunicon%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Bold'%3e%3cpath%20class='cls-1'%20d='M32,0A32,32,0,0,1,54.63,9.39L218.3,173.06a53.33,53.33,0,0,0,75.42,0h0L457.19,9.6a32,32,0,0,1,45.25,45.25L339.11,218.3a117.45,117.45,0,0,1-166,0L9.38,54.63A32,32,0,0,1,32,0Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></span>
+                                    </li>
+                                    <li class="menu-list">
+                                        <a href="" class="menu-link">Fpt</a>
+                                        <span><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20511.42%20252.63'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3ejunicon%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Bold'%3e%3cpath%20class='cls-1'%20d='M32,0A32,32,0,0,1,54.63,9.39L218.3,173.06a53.33,53.33,0,0,0,75.42,0h0L457.19,9.6a32,32,0,0,1,45.25,45.25L339.11,218.3a117.45,117.45,0,0,1-166,0L9.38,54.63A32,32,0,0,1,32,0Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></span>
+                                    </li>
+                                    <li class="menu-list">
+                                        <a href="" class="menu-link">Contacts</a>
+                                        <span><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20511.42%20252.63'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3ejunicon%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Bold'%3e%3cpath%20class='cls-1'%20d='M32,0A32,32,0,0,1,54.63,9.39L218.3,173.06a53.33,53.33,0,0,0,75.42,0h0L457.19,9.6a32,32,0,0,1,45.25,45.25L339.11,218.3a117.45,117.45,0,0,1-166,0L9.38,54.63A32,32,0,0,1,32,0Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="nav-search">
+                                <div class="nav-search-adjuster">
+                                    <span>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <span>Recherche</span>
+                                    </span>
+                                   
+                                </div>
+                            </div>
+                        </di>
+                    </div>
+                    <div class="open-menu">
+                        <span>|||</span>
+                    </div>                 </div>
+              </div>        </div>
+    </header>
+    <main class="main">
+
+        <!-- hero sectipn -->
+
+        <section class="hero_section">
+   
+            <div class="hero-slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <video autoplay muted loop playsinline poster="/repo-junias/assets/002-DXrLZAlK.jpg">
+                        <source src="/repo-junias/assets/My%20most%20beautiful%20drone%20shot%20%E2%80%93%20Cinematic%20FPV%20on%20an%20empty%20beach-L3R6yeDQ.mp4" type="video/mp4">
+                      </video>
+                      <div class="slide-content">
+                        <div class="slide-caption">
+                          <h2>Lorem, ipsum dolor.</h2>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <video autoplay muted loop playsinline poster="/repo-junias/assets/010-CXD9fttr.jpg">
+                        <source src="/repo-junias/assets/Lighthouse-CG3D8ad_.mp4" type="video/mp4">
+                      </video>
+                      <div class="slide-content">
+                        <div class="slide-caption">
+                          <h2>Lorem ipsum dolor sit.</h2>
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>    <!-- Custom Controls -->
+                  <div class="controls">
+                    <button class="pause-btn" aria-label="Pause/Play">:double_vertical_bar:</button>
+                    <div class="swiper-pagination"></div>
+                  </div>    <!-- Navigation Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+  
+        </section>
+
+        <!-- section info simple -->
+
+        <section class="section section_is">
+            <div class="container container_is">
+                 <div class="content content_is">
+                    <article class="article article_is">
+                        <div class="article_is-top"></div>
+                        <div class="article_is-bottom">
+                            <spam class="article_is-title title_1">Lorem ipsum dolor sit.</spam>
+                            <div class="article_is-desc">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum esse ut ipsum repudiandae dignissimos? Fugit!</p>
+                            </div>
+                            <div class="article-is_vp">
+                                <span>voir plus</span><span>></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article article_is">
+                        <div class="article_is-top"></div>
+                        <div class="article_is-bottom">
+                            <spam class="article_is-title title_1">Lorem ipsum dolor sit.</spam>
+                            <div class="article_is-desc">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum esse ut ipsum repudiandae dignissimos? Fugit!</p>
+                            </div>
+                            <div class="article-is_vp">
+                                <span>voir plus</span><span>></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article article_is">
+                        <div class="article_is-top"></div>
+                        <div class="article_is-bottom">
+                            <spam class="article_is-title title_1">Lorem ipsum dolor sit.</spam>
+                            <div class="article_is-desc">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum esse ut ipsum repudiandae dignissimos? Fugit!</p>
+                            </div>
+                            <div class="article-is_vp">
+                                <span>voir plus</span><span>></span>
+                            </div>
+                        </div>
+                    </article>
+                 </div>
+            </div>
+        </section>
+
+        
+        <!-- ===== à propos de nous ======= -->
+
+          <section class="section section_about-us">
+ 
+            <div class="container container_about-us">
+                <div class="content content_about-us">
+                     <div class="about-us_left">
+                        <img src="/repo-junias/assets/010-CXD9fttr.jpg" alt="" class="about-us-photo">
+                     </div>
+                     <div class="about-us_right">
+                         <div class="about-us_title">
+                            <span class="title_1">Lorem ipsum dolor sit amet consectetur Lorem.</span>
+                         </div>
+                         <div class="about-us_desc">
+                           <p>La République Démocratique du Congo est un pays avec un potentiel sans mesure et cela pas que dans les mines et les forêts mais aussi dans le tourisme, ce secteur que son Excellence Monsieur le Président de la République Félix-Antoine Tshisekedi Tshilombo voudrait voir émerger comme une alternative pour le développement de notre pays.</p>
+                           <p>J’en appelle donc à tous les acteurs du tourisme de se rallier derrière des normes, de démontrer plus de professionnalisme et de se soutenir pour l’avancement de ce secteur clé dans notre pays.
+                            Nous pouvons ensemble mettre en place une nouvelle dynamique en vue de mieux vendre cette destination qui a un potentiel touristique indéniable.</p>
+                           <p>L’Office National du Tourisme qui a pour mission, la promotion et le développement du Tourisme en République Démocratique du Congo ne ménagera aucun effort pour que notre pays devienne une référence pour le tourisme africain et mondial.</p>
+                         </div>
+                         <div class="about-us_footer">
+                            <span class="title_1">Madame Jolie Yombo Mukendi</span>
+                            <span>Directeur Général</span>
+                         </div>
+                     </div>
+                </div>
+            </div>
+              
+          </section>
+        <!-- ===== à propos de nous ======= -->
+
+<!-- ======section statistics -->
+<section class="try-out section">
+    <div class="container container_try-out">
+       <div class="try-out_content">
+           <div class="try-out_item try-out_1">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+           <div class="try-out_item try-out_2"></div>
+           <div class="try-out_item try-out_3">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+           <div class="try-out_item try-out_4">
+               <div class="statistics-desc-title">
+                   <span class="title_1">Statistiques du Tourisme</span>
+                 </div>
+           </div>
+           <div class="try-out_item try-out_5">
+
+               <div class="globe-container">
+                   <canvas id="globeCanvas"></canvas>
+               </div>
+
+           </div>
+           <div class="try-out_item try-out_6">
+                   
+              
+             <div class="statistics-desc-text">
+               <div class="statistics-desc-text-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur. laboriosam. Quasi unde aspernatur nesciunt accusamus 
+               </div>
+              </div>
+
+           </div>
+
+           <div class="try-out_item try-out_7">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+
+           <div class="try-out_item try-out_8">
+               
+           </div>
+
+           <div class="try-out_item try-out_9">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+       </div>
+       
+      
+    </div>
+  </section>
+         <!-- ==== projects ====================== -->
+
+          
+      <section class="section section-projects">
+        <div class="container container-projects">
+           
+            <div class="content content-projects">
+               <div class="projects-description">
+                  <div class="project-title"><span>Nos Projets</span></div>
+                  <div class="project-desc"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem Pariatur nihil voluptate ipsum quasi, illo vel! Illo repellat quod ipsum incidunt modi.</span></div>
+               </div>
+
+                <div class="project-cards">
+                    <div class="project-article-card">
+                        <div class="card-img"><div><img src="/repo-junias/assets/valeur3-GwVtBAkC.jpg" alt="" class="img-projects"></div></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='Outline'%20viewBox='0%200%2024%2024'%20width='512'%20height='512'%3e%3cpath%20d='M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z'/%3e%3c/svg%3e" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-article-card">
+                        <div class="card-img"><img src="/repo-junias/assets/valeur3-GwVtBAkC.jpg" alt="" class="img-projects"></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='Outline'%20viewBox='0%200%2024%2024'%20width='512'%20height='512'%3e%3cpath%20d='M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z'/%3e%3c/svg%3e" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-article-card">
+                        <div class="card-img"><img src="/repo-junias/assets/valeur3-GwVtBAkC.jpg" alt="" class="img-projects"></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='Outline'%20viewBox='0%200%2024%2024'%20width='512'%20height='512'%3e%3cpath%20d='M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z'/%3e%3c/svg%3e" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-article-card">
+                        <div class="card-img"><img src="/repo-junias/assets/valeur3-GwVtBAkC.jpg" alt="" class="img-projects"></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='Outline'%20viewBox='0%200%2024%2024'%20width='512'%20height='512'%3e%3cpath%20d='M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z'/%3e%3c/svg%3e" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- globe here ==================================== -->
+        <!-- <div class="globe-container">
+            <canvas id="globeCanvas"></canvas>
+        </div> -->
+    </section>
+
+     <!-- ======end projects ================== -->
+
+
+
+       
+
+        <!-- ======section contacts =========== -->
+
+         <section class="section section_contact">
+             <div class="container container_contacts">
+                 <div class="content content_contacts">
+                    <div class="contacts_left">
+                        <div class="back-cover_contact-left"></div>
+                        <div class="contact_title">
+                            <span class="title_1">Qui sommes nous ?</span>
+                        </div>
+                        <div class="contact_desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam praesentium vel eligendi dolorem a cum reiciendis ducimus illo accusantium odio sequi adipisci quos id tenetur aperiam labore, dignissimos impedit! Illum odio reprehenderit consequatur voluptas nihil fugiat officiis unde numquam?</p>
+                        </div>
+                        <div class="contact_button">
+                            <span class="contact_bttn"><a href="http://">En savoir plus > </a></span>
+                        </div>
+                    </div>
+                    <div class="contacts_right">
+                        <div class="back-cover_contact-right">
+
+                        </div>
+                        <img src="/repo-junias/assets/ONT6-Shjbq27G.png" alt="" class="contacts_right-img">
+                    </div>
+                 </div>
+             </div>
+         </section>
+
+        <!-- ======section contacts =========== -->
+        <!-- start section divers -->
+        <section class="section section_diver">
+
+            <div class="container container_diver">
+
+              <div class="content-statistics-top">
+                <div class="statistics-top-items">
+                    <div class="statistics-top-icon">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='Layer_1'%20data-name='Layer%201'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M24,10v4c0,.553-.447,1-1,1s-1-.447-1-1v-2.586l-2.828,2.828c-.756,.756-1.172,1.761-1.172,2.829v5.929c0,.553-.447,1-1,1s-1-.447-1-1v-5.929c0-1.603,.624-3.109,1.758-4.243l2.828-2.828h-2.586c-.553,0-1-.447-1-1s.447-1,1-1h4c1.103,0,2,.897,2,2Zm-7.793-6.586L13.379,.586c-.756-.756-2.072-.756-2.829,0l-2.829,2.828c-.391,.391-.391,1.023,0,1.414s1.023,.391,1.414,0l1.864-1.864V23c0,.553,.448,1,1,1s1-.447,1-1V3.035l1.793,1.793c.391,.391,1.023,.391,1.414,0s.391-1.023,0-1.414ZM3.453,10h2.547c.552,0,1-.447,1-1s-.448-1-1-1H2.039C.936,8,.039,8.897,.039,10v4c0,.553,.448,1,1,1s1-.447,1-1v-2.586l2.828,2.828c.756,.756,1.172,1.761,1.172,2.829v5.929c0,.553,.448,1,1,1s1-.447,1-1v-5.929c0-1.602-.624-3.108-1.757-4.243l-2.828-2.828Z'/%3e%3c/svg%3e" alt="" class="statistics-icon-img">
+                    </div>
+                    <div class="statistics-top-side">
+                        <div class="statistics-top-side-top">
+                            <span>+</span>
+                            <span class="number" data-start="0" data-end="10" data-duration="2000" >10</span>
+                        </div>
+                        <div class="statistics-top-side-desc">
+                            <span>Lorem, ipsum dolor.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="statistics-top-items">
+                  <div class="statistics-top-icon">
+                      <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='Layer_1'%20data-name='Layer%201'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='m23.414,14.5l-3.5-3.5h-6.914v-2h9V2h-9.007l.007-1.996-2-.008-.008,2.004h-6.907L.586,5.5l3.5,3.5h6.914v2H2v7h8.99l.01,6.001,2-.003-.01-5.999h6.924l3.5-3.5ZM3.414,5.5l1.5-1.5h15.086v3H4.914l-1.5-1.5Zm.586,10.5v-3h15.086l1.5,1.5-1.5,1.5H4Z'/%3e%3c/svg%3e" alt="" class="statistics-icon-img">
+                  </div>
+                  <div class="statistics-top-side">
+                      <div class="statistics-top-side-top">
+                          <span>+</span>
+                          <span class="number" data-start="0" data-end="15" data-duration="2000">15</span>
+                      </div>
+                      <div class="statistics-top-side-desc">
+                          <span>Lorem, ipsum dolor. is</span>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="statistics-top-items">
+                <div class="statistics-top-icon">
+                    <img src="data:image/svg+xml,%3csvg%20id='Layer_1'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%20data-name='Layer%201'%3e%3cpath%20d='m22%207v6.318c-.597.218-1.642.555-3%20.872v-11.19c0-1.654-1.346-3-3-3h-8c-1.654%200-3%201.346-3%203v11.19c-1.358-.317-2.403-.654-3-.872v-6.318h-2v7.649c1.192.469%204.099%202.002%2011%202.332v3.018h-3c-1.654%200-3%201.346-3%203v1h2v-1c0-.552.449-1%201-1h3v2h2v-2h3c.552%200%201%20.448%201%201v1h2v-1c0-1.654-1.346-3-3-3h-3v-3.018c6.911-.332%209.798-1.861%2011-2.332v-7.649zm-14-5h8c.552%200%201%20.448%201%201v8.754c-3.289-.987-6.71-.988-10%200v-8.754c0-.552.449-1%201-1zm-1%2011.843c3.275-1.117%206.724-1.117%2010%200v.747c-1.459.239-3.146.41-5%20.41s-3.541-.171-5-.41z'/%3e%3c/svg%3e" alt="" class="statistics-icon-img">
+                </div>
+                <div class="statistics-top-side">
+                    <div class="statistics-top-side-top">
+                        <span>+</span>
+                        <span class="number" data-start="0" data-end="35" data-duration="2000">35</span>
+                    </div>
+                    <div class="statistics-top-side-desc">
+                        <span>Lorem, ipsum dolor. is</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="statistics-top-items">
+              <div class="statistics-top-icon">
+                  <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='Layer_1'%20data-name='Layer%201'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M9.5,4.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm7.5,6.5v8h-2v5h-2v-5h-2v5h-2v-5h-2V11c0-1.654,1.346-3,3-3h4c1.654,0,3,1.346,3,3Zm-2,0c0-.551-.449-1-1-1h-4c-.551,0-1,.449-1,1v6h6v-6Zm4.5-6c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5Zm4.5,4c0-1.654-1.346-3-3-3h-4c-.472,0-.913,.119-1.311,.314,.918,.332,1.706,.921,2.285,1.686h3.026c.551,0,1,.449,1,1v6h-3v2h1v5h2v-5h2V9ZM4.5,5c1.381,0,2.5-1.119,2.5-2.5S5.881,0,4.5,0,2,1.119,2,2.5s1.119,2.5,2.5,2.5Zm2.5,1H3c-1.654,0-3,1.346-3,3v8H2v5h2v-5h1v-2H2v-6c0-.551,.449-1,1-1h3.026c.579-.765,1.367-1.353,2.285-1.686-.398-.195-.839-.314-1.311-.314Z'/%3e%3c/svg%3e" alt="" class="statistics-icon-img">
+              </div>
+              <div class="statistics-top-side">
+                  <div class="statistics-top-side-top">
+                      <span>+</span>
+                      <span class="number" data-start="0" data-end="7" data-duration="2000">7</span>
+                  </div>
+                  <div class="statistics-top-side-desc">
+                      <span>Lorem, ipsum dolor. is</span>
+                  </div>
+              </div>
+          </div>
+
+
+              </div>
+                 <div class="content content_diver">
+                    <div class="left_divers">
+                       <div class="left_divers_1">
+                          <img src="/repo-junias/assets/Sans%20titre%20-%202-Dxsu2y3c.jpg" alt="" class="left_divers_1-img">
+                       </div>
+                       <div class="left_divers_2">
+                         <div class="left_divers_2-1"></div>
+                       </div>
+                    </div>
+                    <div class="right_divers">
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur ratione consectetur officiis error vitae incidunt nobis, sequi quam tempora tenetur neque deserunt amet? Error accusamus ad ullam aperiam porro?</p>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur ratione consectetur officiis error vitae incidunt nobis, sequi quam tempora tenetur neque deserunt amet? Error accusamus ad ullam aperiam porro?</p>
+                       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur ratione consectetur officiis error vitae incidunt nobis, sequi quam tempora tenetur neque deserunt amet? Error accusamus ad ullam aperiam porro?</p>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nostrum fugiat vero alias mollitia repudiandae quia neque dolorem quibusdam iure, quis dolores quae molestiae veniam perferendis optio, laboriosam beatae non.</p>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi veritatis qui numquam in at dolor, excepturi, optio quae eveniet laborum maiores suscipit? Consectetur velit suscipit, laborum voluptate obcaecati similique?</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+       <!-- end section divers -->
+
+       <!-- start section vision manageriale -->
+             <section class="section vm_section">
+                <div class="container vm_container">
+                    <div class="content vm_content">
+                        <div class="vm_desc_top">
+                            <span class="title_1">Vision Managériale pour l'année 2025</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, libero? Molestiae iure quaerat accusamus esse assumenda explicabo aut, tempora incidunt.</p>
+                            <div class="contact_button">
+                                <span class="contact_bttn"><a href="cadre-organique.html">En savoir plus > </a></span>
+                            </div>
+                        </div>
+
+                        <div class="vm_items">
+                            <div class="vm_items_container">
+                                 <span class="title_1">Promotion, Marketing and Comm.</span>
+                                 <span class="title_1">Etudes et Développement du Tourisme</span>
+                                 <span class="title_1">Partenariat</span>
+                                 <span class="title_1">Administration et Formation</span>
+                                 <span class="title_1">Finances</span>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+       <!-- end vision manageriale ========= -->
+
+       <!-- section nos valeurs ============= -->
+      
+         <sectcion class="section valeurs_section">
+            <div class="container valeurs_container">
+                  <div class="section_title">
+                    <span class="title_1">Nos valeurs</span>
+                  </div>
+                <div class="content content_valeurs">
+                    <div class="valeurs_items">
+                        <div class="valeurs_items-list"><img src="/repo-junias/assets/valeur1-CPK5O4v2.jpeg" alt="" class="valeurs_img"></div>
+                        <div class="valeurs_items-list">
+                            <div class="valuers_icon"><i class="fa-solid fa-people-group"></i></div>
+                            <div class="valeurs_title"><span class="title_1">Tourisme</span></div>
+                            <div class="valeurs_desc"><p>Passages, and more recently with desktop publishing software like AIdus PageMaker including versions of Lorem Ipsum</p></div>
+                        </div>
+                    </div>
+
+                    <div class="valeurs_items">
+                        <div class="valeurs_items-list"><img src="/repo-junias/assets/valeur2valeur3-kuTNaJWS.jpg" alt="" class="valeurs_img"></div>
+                        <div class="valeurs_items-list">
+                            <div class="valuers_icon"><i class="fa-solid fa-bullhorn"></i></div>
+                            <div class="valeurs_title"><span class="title_1">Promotion</span></div>
+                            <div class="valeurs_desc"><p>Passages, and more recently with desktop publishing software like AIdus PageMaker including versions of Lorem Ipsum</p></div>
+                        </div>
+                    </div>
+
+                    <div class="valeurs_items">
+                        <div class="valeurs_items-list"><img src="/repo-junias/assets/valeur3-GwVtBAkC.jpg" alt="" class="valeurs_img"></div>
+                        <div class="valeurs_items-list">
+                            <div class="valuers_icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="valeurs_title"><span class="title_1">Développement</span></div>
+                            <div class="valeurs_desc"><p>Passages, and more recently with desktop publishing software like AIdus PageMaker including versions of Lorem Ipsum</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </sectcion>  
+
+
+       <!-- end section nos valeurs ========= -->
+
+
+       <!-- ===section reseau sociaux ============ -->
+
+ <!-- ===== start infinite sliding social media icon ======= -->
+ <section class="section marquee-section">
+    <div class="marquee-container">
+        <div class="marquee">
+          <ul class="marquee-elmts">
+               <li><img src="/repo-junias/assets/Instagram-Wordmark-Logo.wine-Cwhxj66P.svg" alt=""></li>
+               <li><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='800'%20width='1200'%20viewBox='-150%20-48.38625%201300%20290.3175'%3e%3cpath%20d='M63.35%20190.562H25.669V96.628H0V66.045h25.668V44.283C25.668%2018.495%2037.021%200%2074.6%200c7.948%200%2020.426%201.602%2020.426%201.602V30H81.92c-13.354%200-18.568%204.062-18.568%2015.292v20.753h31.174L91.75%2096.628H63.351zm86.46-126.961c-.549%200-1.114.02-1.673.034-34.94%200-50.926%2026.282-50.926%2063.59%200%2046.998%2020.736%2065.808%2051.199%2065.808%2017.429%200%2028.88-7.336%2035.84-21.026v18.568h35.84V66.058h-35.84v19.149c-5.683-12.32-17.454-21.46-34.44-21.606zm9.113%2029.423c14.675%200%2023.483%2010.236%2023.483%2027.647l.034%2017.783c0%2011.735-7.275%2025.464-23.517%2025.464-24.97%200-24.303-26.962-24.303-35.942%200-30.207%2013.304-34.952%2024.303-34.952zm75.641%2035.299c0-15.131-.724-64.641%2063.78-64.641%2025.893%200%2036.705%208.233%2036.705%208.233l-8.69%2026.953s-10.798-5.946-24.868-5.946c-18.021%200-29.52%2010.447-29.52%2028.828l.02%2013.18c0%2017.662%2011.095%2029.452%2029.537%2029.452%2012.818%200%2024.632-6.002%2024.632-6.002l8.668%2026.39s-9.886%208.285-36.303%208.285c-61.418%200-63.96-44.42-63.96-64.732zm310.628-64.688c34.941%200%2051.179%2026.282%2051.179%2063.59%200%2046.998-20.737%2065.808-51.2%2065.808-17.429%200-30.313-7.335-37.273-21.026v18.568l-35.389-.014V3.786L510.083.509V83.52c5.423-14.523%2023.245-19.885%2035.11-19.885zm-10.534%2029.389c-14.675%200-24.575%2010.236-24.575%2027.647l-.035%2017.783c-.022%2011.735%206.856%2025.464%2024.61%2025.464%2024.97%200%2024.303-26.962%2024.303-35.942%200-30.207-13.303-34.952-24.303-34.952zM400.243%2063.738c-39.63%200-60.552%2021.607-60.552%2060.005v7.134c0%2049.837%2029.381%2062.668%2064.409%2062.668%2034.047%200%2049.458-9.523%2049.458-9.523l-7.031-25.36s-18.128%207.713-37.922%207.713c-20.52%200-29.345-5.23-31.607-24.95h79.564V121.08c0-41.652-23.481-57.343-56.32-57.343zm.955%2025.394c13.718%200%2022.607%208.412%2022.119%2027.921h-46.25c.802-20.533%2010.388-27.92%2024.131-27.92zm270.094-25.565c-40.697%200-62.122%2022.934-62.122%2064.033%200%2056.39%2036.932%2065.467%2062.19%2065.467%2036.976%200%2061.576-19.907%2061.576-64.955%200-46.887-27.66-64.545-61.644-64.545zm-.512%2029.559c17.895%200%2024.986%2013.393%2024.986%2028.638v13.107c0%2018.468-9.922%2029.15-25.054%2029.15-14.152%200-24.098-9.992-24.098-29.15v-13.107c0-20.432%2011.835-28.638%2024.166-28.638zm137.01-29.559c-40.697%200-62.122%2022.934-62.122%2064.033%200%2056.39%2036.932%2065.467%2062.19%2065.467%2036.975%200%2061.576-19.907%2061.576-64.955%200-46.887-27.661-64.545-61.644-64.545zm-.512%2029.559c17.895%200%2024.985%2013.393%2024.985%2028.638v13.107c0%2018.468-9.922%2029.15-25.053%2029.15-14.152%200-24.098-9.992-24.098-29.15v-13.107c0-20.432%2011.835-28.638%2024.166-28.638zm76.355%2097.436V3.786L921.316.51v125.189l37.386-59.653h39.796l-39%2061.783L1000%20190.562h-39.909l-38.775-60.914v60.914z'%20fill='%231877f2'/%3e%3c/svg%3e" alt=""></li>
+               <li><img class="flickr-fix-icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='800'%20width='1200'%20version='1.0'%20overflow='visible'%20viewBox='-84.73395%20-42.771%20734.3609%20256.626'%3e%3cpath%20d='M22.622%2081.122H0V53.269h23.262V46.2C23.262%2011.937%2038.84%200%2069.572%200c8.323%200%2014.725%201.326%2019.632%202.212L86.858%2029.62c-3.2-1.105-6.402-1.77-12.164-1.77-9.816%200-13.658%207.074-13.658%2018.349v7.072h27.316v27.852H61.036v87.307H22.622zM108.41%202.653h38.413v165.775H108.41zm71.278%202.652h38.414v29.177h-38.414zm0%2047.965h38.414v115.157h-38.414zm153.869%2032.933c-7.043-4.418-14.085-6.409-23.262-6.409-16.646%200-29.45%2011.936-29.45%2031.83%200%2018.347%2014.939%2030.28%2031.584%2030.28%208.751%200%2017.502-1.987%2023.903-5.524l.853%2029.618c-9.604%203.318-21.127%205.086-31.37%205.086-36.709%200-64.664-22.104-64.664-60.122%200-38.24%2027.955-60.342%2064.663-60.342%2011.525%200%2021.767%201.99%2030.518%206.41zm58.048%2015.475h.428l32.01-48.409h42.041l-38.626%2052.827%2041.828%2062.332h-46.524l-30.73-57.025h-.427v57.025h-38.412V2.653h38.412z'%20fill='%230063db'/%3e%3cpath%20d='M562.97%2085.098c-4.268-1.324-8.537-1.324-13.017-1.324-17.925%200-27.957%2013.481-27.957%2036.028v48.626h-38.412V53.27h34.997v21.22h.428c6.614-14.59%2016.218-23.872%2032.865-23.872%204.478%200%209.174.663%2013.019%201.325z'%20fill='%23ff0084'/%3e%3c/svg%3e" alt=""></li>
+               <li><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='800'%20width='1200'%20viewBox='-40.125525%20-16.3118%20347.75455%2097.8708'%3e%3cpath%20fill='%230a66c2'%20d='M263.744%2061.1094a1.2%201.2%200%20001.21-1.269c0-.9-.543-1.33-1.657-1.33h-1.8v4.712h.677v-2.054h.832l.019.025%201.291%202.029h.724l-1.389-2.1zm-.783-.472h-.785v-1.593h.995c.514%200%201.1.084%201.1.757%200%20.774-.593.836-1.314.836M0%209.5874h9.993v36.4h18.5v9.222H0zm32.911%2014.689h9.6v30.916h-9.6zm4.8-15.37a5.569%205.569%200%2011-5.57%205.569%205.569%205.569%200%20015.57-5.569m44.958.674h9.6v27.265l10.88-12.583h11.77l-12.6%2014.313%2012.335%2016.63h-12.066l-10.191-15.282h-.126v15.28h-9.6zm-34.835%2014.699h9.219v4.225h.131a10.085%2010.085%200%20019.09-4.994c9.735%200%2011.527%206.405%2011.527%2014.726v16.954h-9.6v-15.031c0-3.588-.066-8.2-5-8.2-4.99%200-5.76%203.907-5.76%207.939v15.288h-9.6z'/%3e%3cpath%20fill='%230a66c2'%20d='M135.136%2036.1384a5.756%205.756%200%2000-5.894-5.89%206.406%206.406%200%2000-6.784%205.89zm8.132%2013.7a16.909%2016.909%200%2001-13.128%206.151c-9.6%200-17.286-6.408-17.286-16.331%200-9.923%207.685-16.328%2017.286-16.328%208.973%200%2014.6%206.4%2014.6%2016.328v3.01h-22.282a7.171%207.171%200%20007.235%206.019%208.193%208.193%200%20006.851-3.778zm21.482-18.089c-4.8%200-7.68%203.205-7.68%207.875s2.879%207.878%207.68%207.878%207.687-3.2%207.687-7.878-2.881-7.875-7.687-7.875m16.525%2023.437h-8.838v-4.1h-.131a12.071%2012.071%200%2001-9.544%204.868c-9.224%200-15.3-6.657-15.3-16.071%200-8.646%205.377-16.585%2014.216-16.585%203.973%200%207.684%201.087%209.861%204.1h.126V9.5774h9.609zm64.809.018h-9.6v-15.034c0-3.585-.064-8.2-4.993-8.2-5%200-5.765%203.906-5.765%207.939v15.294h-9.6v-30.916h9.216v4.225h.129a10.1%2010.1%200%20019.093-4.994c9.73%200%2011.524%206.4%2011.524%2014.726zm-40.79-35.143a5.571%205.571%200%20115.57-5.572%205.571%205.571%200%2001-5.57%205.572m4.8%2035.143h-9.61v-30.917h9.61zm40.776-55.2h-55.21a4.728%204.728%200%2000-4.781%204.67v55.439a4.731%204.731%200%20004.781%204.675h55.21a4.741%204.741%200%20004.8-4.675V4.6704a4.738%204.738%200%2000-4.8-4.67m12.173%2056.411a4.418%204.418%200%2010.085%200h-.085m0%208.33a3.874%203.874%200%20113.809-3.938v.065a3.791%203.791%200%2001-3.708%203.871h-.1'/%3e%3c/svg%3e" alt=""></li>
+               <li><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='800'%20width='1200'%20viewBox='-5.123925%20-1.9995375%2044.40735%2011.997225'%3e%3cg%20fill='none'%3e%3cpath%20fill='%2325F4EE'%20d='M2.75665%203.14987v-.31166a2.29997%202.29997%200%2000-.327-.02811C1.36929%202.80786.43049%203.495.11207%204.50645c-.31841%201.01145.05744%202.11246.92787%202.71807C.38792%206.52672.20687%205.51089.57767%204.6308c.3708-.8801%201.2242-1.4601%202.17898-1.48093z'/%3e%3cpath%20fill='%2325F4EE'%20d='M2.8154%206.68038c.59288-.00079%201.08021-.46787%201.10617-1.06017V.33466h.96565A1.81125%201.81125%200%20014.85912%200H3.53837v5.28044c-.02196.59532-.51044%201.06687-1.10616%201.06784a1.12393%201.12393%200%2001-.51093-.12773%201.10871%201.10871%200%2000.89413.45983zm3.8754-4.55236v-.29379a1.80358%201.80358%200%2001-.99887-.30145%201.83168%201.83168%200%2000.99886.59524z'/%3e%3cpath%20fill='%23FE2C55'%20d='M5.69193%201.53278A1.8189%201.8189%200%20015.23976.3321h-.35254a1.82912%201.82912%200%2000.80471%201.20068zM2.42966%204.13085c-.50877.00261-.95047.35116-1.0713.84538-.12084.49422.1102%201.00725.56037%201.24432-.24392-.33676-.27838-.78187-.0892-1.15215.1892-.3703.57006-.6032.98588-.60289a1.16489%201.16489%200%2001.327.0511V3.17285a2.31983%202.31983%200%2000-.327-.02554h-.05876v1.02185a1.13682%201.13682%200%2000-.327-.03832z'/%3e%3cpath%20fill='%23FE2C55'%20d='M6.6908%202.12802v1.02185a3.13458%203.13458%200%2001-1.83168-.59523v2.68493c-.00282%201.33975-1.0897%202.42435-2.42946%202.42435a2.40383%202.40383%200%2001-1.38973-.4394c.67857.72981%201.73462.97005%202.66212.6056.9275-.36446%201.5375-1.25936%201.5377-2.2559V2.89696a3.13965%203.13965%200%20001.83424.58757V2.16889a1.87247%201.87247%200%2001-.3832-.04087z'/%3e%3cpath%20fill='%23000'%20d='M4.85912%205.23957V2.55464a3.13454%203.13454%200%20001.83423.58757V2.12035a1.83168%201.83168%200%2001-1.00142-.58757A1.82912%201.82912%200%20014.88722.3321h-.96565v5.2881c-.01932.47179-.33532.87957-.78734%201.01605-.45203.13647-.9409-.02832-1.21806-.4106-.45016-.23706-.6812-.7501-.56037-1.24431.12084-.49422.56253-.84277%201.0713-.84538.1109.001.22107.0182.327.0511V3.1652c-.96015.01626-1.82.59829-2.19184%201.48365-.37185.88536-.18546%201.9068.47512%202.60377a2.40392%202.40392%200%20001.39228.4113c1.33976%200%202.42664-1.0846%202.42946-2.42435z'/%3e%3cg%20transform='translate(8.4684%201.86829)%20scale(.26698)'%3e%3cpath%20fill='%23000'%20d='M10.46%2021.72H5.23v-17H.01L0%20.06h16.12l-1.48%204.66h-4.18zm42.53%200h-5.22v-17h-5.24L42.52.06h16.49l-1.48%204.66h-4.54zM17.1%206.95h5.17v14.77h-5.13zm13.91%207.58l-1.53%201.48v5.71h-5.16V0h5.16v10.09l5.12-5h6.16l-6.47%206.28%207.25%2010.35h-5.69zm54.7%200l-1.48%201.48v5.71h-5.17L79.01%200h5.22v10.09l5.11-5h6.16l-6.47%206.28%207.2%2010.35h-5.69z'/%3e%3ccircle%20r='2.6'%20cy='2.66'%20cx='19.69'%20fill='%23000'/%3e%3cpath%20fill='%2325F4EE'%20d='M58.35%2012.88c.0016-4.61343%203.55065-8.4499%208.15-8.81h-.77c-4.6743.27265-8.32524%204.14275-8.32524%208.825%200%204.68225%203.65094%208.55235%208.32524%208.825h.77c-4.61087-.36098-8.1641-4.21504-8.15-8.84z'/%3e%3cpath%20fill='%23FE2C55'%20d='M68.51%204.04h-.78c4.58446.37866%208.11233%204.20993%208.11233%208.81%200%204.60007-3.52787%208.43134-8.11233%208.81h.78c4.8822%200%208.84-3.9578%208.84-8.84%200-4.8822-3.9578-8.84-8.84-8.84z'/%3e%3cpath%20fill='%23000'%20d='M67.11%2017.18c-2.37482%200-4.3-1.92518-4.3-4.3%200-2.37482%201.92518-4.3%204.3-4.3%202.37482%200%204.3%201.92518%204.3%204.3-.0055%202.37254-1.92746%204.2945-4.3%204.3zm0-13.14c-4.8822%200-8.84%203.9578-8.84%208.84%200%204.8822%203.9578%208.84%208.84%208.84%204.8822%200%208.84-3.9578%208.84-8.84%200-2.34451-.93135-4.593-2.58918-6.25082C71.703%204.97135%2069.45452%204.04%2067.11%204.04z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></li>
+               <li><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='800'%20width='1200'%20xml:space='preserve'%20y='0'%20x='0'%20id='Layer_1'%20version='1.1'%20viewBox='-57.15%20-21.25%20495.3%20127.5'%3e%3cstyle%20id='style7427'%20type='text/css'%3e.st2{fill:%23282828}%3c/style%3e%3cg%20id='g7433'%3e%3cpath%20id='path7429'%20d='M118.9%2013.3c-1.4-5.2-5.5-9.3-10.7-10.7C98.7%200%2060.7%200%2060.7%200s-38%200-47.5%202.5C8.1%203.9%203.9%208.1%202.5%2013.3%200%2022.8%200%2042.5%200%2042.5s0%2019.8%202.5%2029.2C3.9%2076.9%208%2081%2013.2%2082.4%2022.8%2085%2060.7%2085%2060.7%2085s38%200%2047.5-2.5c5.2-1.4%209.3-5.5%2010.7-10.7%202.5-9.5%202.5-29.2%202.5-29.2s.1-19.8-2.5-29.3z'%20fill='red'/%3e%3cpath%20id='polygon7431'%20fill='%23fff'%20d='M48.6%2024.3v36.4l31.6-18.2z'/%3e%3c/g%3e%3cg%20id='g7451'%3e%3cg%20id='g7449'%3e%3cpath%20id='path7435'%20d='M176.3%2077.4c-2.4-1.6-4.1-4.1-5.1-7.6-1-3.4-1.5-8-1.5-13.6v-7.7c0-5.7.6-10.3%201.7-13.8%201.2-3.5%203-6%205.4-7.6%202.5-1.6%205.7-2.4%209.7-2.4%203.9%200%207.1.8%209.5%202.4%202.4%201.6%204.1%204.2%205.2%207.6%201.1%203.4%201.7%208%201.7%2013.8v7.7c0%205.7-.5%2010.2-1.6%2013.7-1.1%203.4-2.8%206-5.2%207.6-2.4%201.6-5.7%202.4-9.8%202.4-4.2-.1-7.6-.9-10-2.5zm13.5-8.4c.7-1.7%201-4.6%201-8.5V43.9c0-3.8-.3-6.6-1-8.4-.7-1.8-1.8-2.6-3.5-2.6-1.6%200-2.8.9-3.4%202.6-.7%201.8-1%204.6-1%208.4v16.6c0%203.9.3%206.8%201%208.5.6%201.7%201.8%202.6%203.5%202.6%201.6%200%202.7-.8%203.4-2.6z'%20class='st2'/%3e%3cpath%20id='path7437'%20d='M360.9%2056.3V59c0%203.4.1%206%20.3%207.7.2%201.7.6%203%201.3%203.7.6.8%201.6%201.2%203%201.2%201.8%200%203-.7%203.7-2.1.7-1.4%201-3.7%201.1-7l10.3.6c.1.5.1%201.1.1%201.9%200%204.9-1.3%208.6-4%2011-2.7%202.4-6.5%203.6-11.4%203.6-5.9%200-10-1.9-12.4-5.6-2.4-3.7-3.6-9.4-3.6-17.2v-9.3c0-8%201.2-13.8%203.7-17.5%202.5-3.7%206.7-5.5%2012.6-5.5%204.1%200%207.3.8%209.5%202.3%202.2%201.5%203.7%203.9%204.6%207%20.9%203.2%201.3%207.6%201.3%2013.2v9.1h-20.1zm1.5-22.4c-.6.8-1%202-1.2%203.7-.2%201.7-.3%204.3-.3%207.8v3.8h8.8v-3.8c0-3.4-.1-6-.3-7.8-.2-1.8-.7-3-1.3-3.7-.6-.7-1.6-1.1-2.8-1.1-1.4-.1-2.3.3-2.9%201.1z'%20class='st2'/%3e%3cpath%20id='path7439'%20d='M147.1%2055.3L133.5%206h11.9l4.8%2022.3c1.2%205.5%202.1%2010.2%202.7%2014.1h.3c.4-2.8%201.3-7.4%202.7-14l5-22.4h11.9L159%2055.3v23.6h-11.8V55.3z'%20class='st2'/%3e%3cpath%20id='path7441'%20d='M241.6%2025.7V79h-9.4l-1-6.5h-.3c-2.5%204.9-6.4%207.4-11.5%207.4-3.5%200-6.1-1.2-7.8-3.5-1.7-2.3-2.5-5.9-2.5-10.9V25.7h12v39.1c0%202.4.3%204.1.8%205.1s1.4%201.5%202.6%201.5c1%200%202-.3%203-1%201-.6%201.7-1.4%202.1-2.4V25.7z'%20class='st2'/%3e%3cpath%20id='path7443'%20d='M303.1%2025.7V79h-9.4l-1-6.5h-.3c-2.5%204.9-6.4%207.4-11.5%207.4-3.5%200-6.1-1.2-7.8-3.5-1.7-2.3-2.5-5.9-2.5-10.9V25.7h12v39.1c0%202.4.3%204.1.8%205.1s1.4%201.5%202.6%201.5c1%200%202-.3%203-1%201-.6%201.7-1.4%202.1-2.4V25.7z'%20class='st2'/%3e%3cpath%20id='path7445'%20d='M274.2%2015.7h-11.9v63.2h-11.7V15.7h-11.9V6h35.5z'%20class='st2'/%3e%3cpath%20id='path7447'%20d='M342.8%2034.2c-.7-3.4-1.9-5.8-3.5-7.3s-3.9-2.3-6.7-2.3c-2.2%200-4.3.6-6.2%201.9-1.9%201.2-3.4%202.9-4.4%204.9h-.1V3.3h-11.6v75.6h9.9l1.2-5h.3c.9%201.8%202.3%203.2%204.2%204.3%201.9%201%203.9%201.6%206.2%201.6%204.1%200%207-1.9%208.9-5.6%201.9-3.7%202.9-9.6%202.9-17.5v-8.4c-.1-6.1-.4-10.8-1.1-14.1zm-11%2021.7c0%203.9-.2%206.9-.5%209.1-.3%202.2-.9%203.8-1.6%204.7-.8.9-1.8%201.4-3%201.4-1%200-1.9-.2-2.7-.7-.8-.5-1.5-1.2-2-2.1V38.1c.4-1.4%201.1-2.6%202.1-3.6%201-.9%202.1-1.4%203.2-1.4%201.2%200%202.2.5%202.8%201.4.7%201%201.1%202.6%201.4%204.8.3%202.3.4%205.5.4%209.6v7z'%20class='st2'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""></li>
+               
+          </ul>
+        </div>
+    </div>
+  </section>
+  <!-- =====end infinite sliding social media icon ===========-->
+
+
+       <!-- ====section reseau sociaux ========== -->
+
+
+         <!--======start section info ========= -->
+
+         <section class="section section-actu">
+            <div class="container container-actu">
+                   <div class="title-section">
+                      <h2 class="title_1">Actualités et Infos</h2>
+                   </div>
+                <div class="content content-actu">
+                   <div class="actu-item actu-left">
+                      <div class="actu-left_title">
+                          <div class="actu-left_main-title">
+                            <span class="title_1">
+                                Prèmiere ministre Judith Suminwa recu au village de la femme
+                            </span>
+                          </div>
+                          <div class="actu-left_meta">
+                            <span class="actu-meta_author">
+                                <span>icon</span>
+                                <span>Blaise Basomboli</span>
+                            </span>
+                            <span class="actu-meta_publish-date">
+                                11,mars,2025 - kinshasa
+                            </span>
+                          </div>
+                      </div>
+                      <div class="actu-left_img">
+                         <img src="/repo-junias/assets/portrait-DcRzkRHO.jpg" alt="" class="actu-left_image">
+                      </div>
+                   </div>
+                   <div class="actu-item actu-right">
+                       <div class="actu-right_content">
+                          <div class="actu-right_items">
+                             <div class="actu-right_numero">01</div>
+                             <div class="actu-right_title">
+                                <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                                <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                             </div>
+                          </div>
+
+                          <div class="actu-right_items">
+                            <div class="actu-right_numero">02</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">03</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">04</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">05</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">06</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+
+                       </div>
+                   </div>
+                </div>
+            </div>
+          </section>
+
+
+       <!-- end section actualités de l'office ====== -->
+
+       <!-- ========essaie============ -->
+<!-- 
+         <section class="section section-globe">
+            <div class="globe-container">
+              <canvas id="globeCanvas"></canvas>
+            </div>
+         </section> -->
+       <!-- ==================== -->
+         <!--== start section nos partennaires ===-->
+
+         <section class="section section-partennaires">
+            <div class="container container-partennaires">
+              <div class="title-section">
+                  <h2 class="title_1">Nos Partenaires</h2>
+               </div>
+              <div class="content content-partennaires">
+                  <div class="partennaires-items">
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/amazon-CuW7-9dC.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/apple-BA_o8208.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/google-B0KgrB-3.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/hp-CQQb49-H.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/hyundai-C5FGWzgH.png" alt="" class="partennaires-img">
+                       </div>
+                  </div>
+                  <div class="partennaires-items">
+                     
+                      <div class="partennaires-item">
+                          <img src="/repo-junias/assets/netflix-D06Mq7dk.png" alt="" class="partennaires-img">
+                       </div>
+
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/vodacom-seeklogo-BGkFjC_E.png" alt="" class="partennaires-img">
+                       </div>
+
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/airtel-9jeOmp5-.png" alt="" class="partennaires-img">
+                       </div>
+
+                       <div class="partennaires-item">
+                          <img src="/repo-junias/assets/totalenergies-seeklogo-n4ni3Rne.png" alt="" class="partennaires-img">
+                       </div>
+
+                  </div>
+              </div>
+            </div>
+        </section>
+
+       <!-- == end section nos partennaires === -->
+
+
+      
+    </main>
+    <footer class="footer">
+        <section class="section footer-section">
+            <div class="container container-footer">
+                <div class="content content-footer">
+                    <div class="top-footer">
+
+                      <div class="top-footer-items">
+                        <div class="top-footer-title">
+                           <span class="title_1"></span>
+                        </div>
+                        <div class="top-footer-item">
+                            <img class="top-footer-item-img" src="/repo-junias/assets/ONT3-DFzLegAZ.png" alt="">
+                        </div>
+                    </div>
+
+
+                       <div class="top-footer-items">
+                           <div class="top-footer-title">
+                              <span class="title_1">Lorem, ipsum dolor.</span>
+                           </div>
+                           <div class="top-footer-item">
+                               <div class="top-footer-links">
+                                 <a href="" class="top-footer-link">Lorem, ipsum.</a>
+                               </div>
+ 
+                               <div class="top-footer-links">
+                                 <a href="" class="top-footer-link">Lorem, ipsum dolor.</a>
+                               </div>
+ 
+                               <div class="top-footer-links">
+                                 <a href="" class="top-footer-link">Lorem ipsum dolor sit amet.</a>
+                               </div>
+                           </div>
+                       </div>
+ 
+                       <div class="top-footer-items">
+                         <div class="top-footer-title">
+                            <span class="title_1">Lorem, ipsum dolor.</span>
+                         </div>
+                         <div class="top-footer-item">
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum dolor.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem ipsum dolor sit amet.</a>
+                             </div>
+                         </div>
+                     </div>
+ 
+                     <div class="top-footer-items">
+                         <div class="top-footer-title">
+                            <span class="title_1">Lorem, ipsum dolor.</span>
+                         </div>
+                         <div class="top-footer-item">
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum dolor.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem ipsum dolor sit amet.</a>
+                             </div>
+                         </div>
+                     </div>
+ 
+                    </div>
+                    <div class="bottom-footer">
+                        <div class="footer-bottom-items">
+                           <span class="footer-bottom-link">Power by Office National du Tourisme</span>
+                        </div>
+                        <div class="footer-bottom-items">
+                         <span class="footer-bottom-link">Copyright 2025, all right reserved</span>
+                        </div>
+                        <div class="footer-bottom-items">
+                            <span class="top_logo"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="top_logo"><i class="fa-brands fa-x-twitter"></i></span>
+                            <span class="top_logo"><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </footer>
+<!-- js script -->
+
+<!-- swiper script -->
+    
+
+</body>
+</html>
