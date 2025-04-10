@@ -1,0 +1,22 @@
+.container-p-direction{
+    display: grid;
+    row-gap: 3rem;
+}
+.container-p-direction .title_1{
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    font-family: var(--second-font);
+    font-size: 2.7rem;
+    color: var(--text-color);
+    letter-spacing: 1.2px;
+}
+.content-p-direction{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    
+}
