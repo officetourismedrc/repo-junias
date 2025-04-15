@@ -235,6 +235,7 @@ if(document.querySelector('.hero_section') !==  null){
   const navMenuFlip = document.querySelector('.nav-menu');
   const navSearchFlip = document.querySelector('.nav-search');
   const logoContainer = document.querySelector('.logo-img');
+  const menuBurger = document.querySelector('.open-menu span img');
 
   // Register ScrollTrigger plugin
         // Create flip animation timeline
@@ -255,11 +256,13 @@ function colorChangeMenuReverse(){
 }
 function colorChangeMenuLogo(){
   navBarFlip.classList.add('color-change');
-  logoContainer.src = 'assets/images/Logos/ONT1.svg'
+  logoContainer.src = '/repo-junias/assets/images/Logos/ONT1.svg';
+  menuBurger.src = '/repo-junias/assets/images/icons/menu-burger-blue.png';
 }
 function colorChangeMenuReverseLogo(){
   navBarFlip.classList.remove('color-change');
-  logoContainer.src = 'assets/images/Logos/ONT6.svg'
+  logoContainer.src = '/repo-junias/assets/images/Logos/ONT6.svg';
+  menuBurger.src = '/repo-junias/assets/images/icons/menu-burger-white.png';
 }
 //   tl.to(logoFlip,{
 //       rotationX: 360,
