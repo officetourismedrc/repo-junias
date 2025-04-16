@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/images/Logos/ONT2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- start css link -->
+      <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- end css link -->
+
+    
+    <!-- flaticon -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" integrity="sha512-6f7HT84a/AplPkpSRSKWqbseRTG4aRrhadjZezYQ0oVk/B+nm/US5KzQkyyOyh0Mn9cyDdChRdS9qaxJRHayww==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <!-- =====font awsome====== -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+     <!-- ========  three.js ======= -->
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.174.0/three.tsl.js" integrity="sha512-kLVG+9hRPzp61ceEI5/hoRsQmEV9cFf4r4DOCYIBPteqgaTB6awXLAZlWUO5Dvlisok4doFjnxs75mngpXI35w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+   
+    <style>
+      .hero-slider {
+        position: relative;
+        height: 100vh;
+      }  .swiper-slide video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }  .slide-content {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: black;
+        text-align: center;
+        z-index: 10;
+        max-width: 800px;
+        width: 90%;
+      }  .slide-caption {
+        background: rgba(255, 255, 255, 0.13);
+        backdrop-filter: blur(3px);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }  .controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }  .pause-btn {
+        background: none;
+        border: 2px solid white;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }  .pause-btn:hover {
+        background: rgba(255,255,255,0.2);
+      }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-cotainer">         
+                 <div class="logo">
+                 <div class="logo-adjuster">
+                    <img src="assets/images/Logos/ONT6.svg" alt="" class="logo-img">
+                 </div>
+              </div>        
+             <div class="nav">
+                 <div class="nav-top">
+                    <div class="nav-top_left">
+                        <span>ontRDC@officetourisme.com</span>
+                        <span>+243 991785496</span>
+                        
+                    </div>
+                    <div class="nav-top_right">
+                        <span><i class="fa-brands fa-facebook-f"></i></span>
+                        <span><i class="fa-brands fa-x-twitter"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                 </div>
+                 <div class="nav-bottom">
+                    <div class="nav-bottom-menu">
+                        <di class="nav-bottom-menu-container">
+                            <div class="mobile-menu-icons-top">
+
+                                <div class="mobile-menu-icons-container-top">
+                                     <span class="mm-icon"><i class="fa-brands fa-square-facebook"></i></span>
+                                     <span class="mm-icon"><i class="fa-brands fa-square-instagram"></i></span>
+                                     <span class="mm-icon"><i class="fa-brands fa-linkedin"></i></span>
+                                     <span class="mm-icon"><i class="fa-brands fa-square-x-twitter"></i></span>
+                                </div>
+
+                                <div class="close-menu">
+                                    <span><i class="fa-solid fa-circle-xmark"></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="nav-menu">
+                            <div class="menu">
+                                <ul class="menu-lists">
+                                    <!-- <li class="menu-list">
+                                        <div class="menu-list-top">
+                                        <a href="" class="menu-link">Accueil</a>
+                                        <span><img src="assets/images/Vectors/angle-down.svg" alt=""></span>
+                                        </div>
+
+                                        
+                                        <div class="menu-drop-down">
+                                            
+                                        </div>
+                                       
+                                    </li> -->
+                                    <li class="menu-list">
+                                        <div class="menu-list-top">
+                                            <a href="" class="menu-link">Office</a>
+                                            <span><img src="assets/images/Vectors/angle-down.svg" alt=""></span>
+                                        </div>
+                                        <div class="menu-drop-down">
+                                            <ul class="menu-drop-down-lists">
+                                                <li class="menu-drop-down-list">
+                                                    <i class="fi fi-rr-arrow-small-right"></i> <a href="./cadre-organique.html" class="menu-drop-down-link">Cadre Organique</a>
+                                                </li>
+
+                                                <li class="menu-drop-down-list">
+                                                    <i class="fi fi-rr-arrow-small-right"></i> <a href="./office-direction.html" class="menu-drop-down-link">Directions</a>
+                                                </li>
+
+                                                <li class="menu-drop-down-list">
+                                                    <i class="fi fi-rr-arrow-small-right"></i> <a href="./antenne-office.html" class="menu-drop-down-link">Directions Régionales / Agences</a>
+                                                </li>
+
+
+                                                <li class="menu-drop-down-list">
+                                                    <i class="fi fi-rr-arrow-small-right"></i> <a href="./about-us.html" class="menu-drop-down-link">A propos de Nous</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="menu-list">
+                                        <div class="menu-list-top">
+                                        <a href="" class="menu-link">Ressources</a>
+                                        <span><img src="assets/images/Vectors/angle-down.svg" alt=""></span>
+                                        </div>
+                                         <!-- drop down sub menu  -->
+                                         <div class="menu-drop-down">
+                                           
+                                        </div>
+                                        <!-- sub menu  -->
+                                    </li>
+                                    <li class="menu-list">
+                                        <div class="menu-list-top">
+                                        <a href="" class="menu-link">Projets</a>
+                                        <span><img src="assets/images/Vectors/angle-down.svg" alt=""></span>
+                                        </div>
+
+
+                                        <!-- drop down sub menu  -->
+                                        <div class="menu-drop-down">
+                                            
+                                        </div>
+                                        <!-- sub menu  -->
+                                    </li>
+                                    <li class="menu-list">
+                                        <div class="menu-list-top">
+                                        <a href="" class="menu-link">Fpt</a>
+                                        <span><img src="assets/images/Vectors/angle-down.svg" alt=""></span>
+                                        </div>
+                                         <!-- drop down sub menu  -->
+                                         <div class="menu-drop-down">
+                                            
+                                        </div>
+                                        <!-- sub menu  -->
+                                    </li>
+                                    <li class="menu-list">
+                                        <div class="menu-list-top">
+                                        <a href="./contacts.html" class="menu-link">Contacts</a>
+                                        <span><img src="assets/images/Vectors/angle-down.svg" alt=""></span>
+                                        </div>
+                                         <!-- drop down sub menu  -->
+                                         <div class="menu-drop-down">
+                                           
+                                        </div>
+                                        <!-- sub menu  -->
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="nav-search">
+                                <div class="nav-search-adjuster">
+                                    <span>
+                                        
+                                        <form action="" class="search-site">
+                                            <input class="search-input-site" type="text">
+                                            <button class="search-site-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        </form>
+
+                                    </span>
+                                   
+                                </div>
+                            </div>
+
+                            <!-- ==== mobikle section only deactivate on big screen =====-->
+                            <div class="mobile-menu-icons-bottom">
+
+                                <div class="mobile-menu-icons-container-bottom">
+                                     <span class="mm-info"><span><i class="fa-solid fa-envelope"></i></span><span>jkkjkkas@gmail.com</span></span>
+                                     <span class="mm-info"><span><i class="fa-solid fa-phone"></i></span><span>00243 997600000</span></span>
+                                </div>
+                            </div>
+                            <!-- mobile only section -->
+                        </di>
+                    </div>
+                    <div class="open-menu">
+                        <span><img src="assets/images/icons/menu-burger-white.png" alt=""></span>
+                    </div>
+                   </div>
+              </div>        </div>
+    </header>
+    <main class="main">
+
+        <!-- hero sectipn -->
+
+        <section class="hero_section">
+   
+            <div class="hero-slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <video autoplay muted loop playsinline poster="assets/images/002.jpg">
+                        <source src="assets/videos/My most beautiful drone shot – Cinematic FPV on an empty beach.mp4" type="video/mp4">
+                      </video>
+                      <div class="slide-content">
+                        <div class="slide-caption">
+                          <h2>Lorem, ipsum dolor.</h2>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <video autoplay muted loop playsinline poster="assets/images/010.jpg">
+                        <source src="assets/videos/Lighthouse.mp4" type="video/mp4">
+                      </video>
+                      <div class="slide-content">
+                        <div class="slide-caption">
+                          <h2>Lorem ipsum dolor sit.</h2>
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>    <!-- Custom Controls -->
+                  <div class="controls">
+                    <button class="pause-btn" aria-label="Pause/Play">:double_vertical_bar:</button>
+                    <div class="swiper-pagination"></div>
+                  </div>    <!-- Navigation Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+  
+        </section>
+
+        <!-- section info simple -->
+
+        <section class="section section_is">
+            <div class="container container_is">
+                 <div class="content content_is">
+                    <article class="article article_is">
+                        <div class="article_is-top">
+                           
+                        </div>
+                        <div class="article_is-bottom">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <spam class="article_is-title title_1">A propos de nous</spam>
+                            <div class="article_is-desc">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum esse ut ipsum repudiandae dignissimos? Fugit!</p>
+                            </div>
+                            <div class="article-is_vp">
+                                <span>voir plus</span><span>></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article article_is">
+                        <div class="article_is-top"></div>
+                        <div class="article_is-bottom">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <spam class="article_is-title title_1">Fond de Promotion de Tourisme</spam>
+                            <div class="article_is-desc">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum esse ut ipsum repudiandae dignissimos? Fugit!</p>
+                            </div>
+                            <div class="article-is_vp">
+                                <span>voir plus</span><span>></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article article_is">
+                        <div class="article_is-top"></div>
+                        <div class="article_is-bottom">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <spam class="article_is-title title_1">Nos Differents Projets</spam>
+                            <div class="article_is-desc">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum esse ut ipsum repudiandae dignissimos? Fugit!</p>
+                            </div>
+                            <div class="article-is_vp">
+                                <span>voir plus</span><span>></span>
+                            </div>
+                        </div>
+                    </article>
+                 </div>
+            </div>
+        </section>
+
+        
+        <!-- ===== à propos de nous ======= -->
+
+          <section class="section section_about-us">
+ 
+            <div class="container container_about-us">
+                <div class="content content_about-us">
+                     <div class="about-us_left">
+                        <img src="assets/images/010.jpg" alt="" class="about-us-photo">
+                     </div>
+                     <div class="about-us_right">
+                         <div class="about-us_title">
+                            <span class="title_1">Mot de Madame le Directeur Général</span>
+                         </div>
+                         <div class="about-us_desc">
+                           <p>La République Démocratique du Congo est un pays avec un potentiel sans mesure et cela pas que dans les mines et les forêts mais aussi dans le tourisme, ce secteur que son Excellence Monsieur le Président de la République Félix-Antoine Tshisekedi Tshilombo voudrait voir émerger comme une alternative pour le développement de notre pays.</p>
+                           <p>J’en appelle donc à tous les acteurs du tourisme de se rallier derrière des normes, de démontrer plus de professionnalisme et de se soutenir pour l’avancement de ce secteur clé dans notre pays.
+                            Nous pouvons ensemble mettre en place une nouvelle dynamique en vue de mieux vendre cette destination qui a un potentiel touristique indéniable.</p>
+                           <p>L’Office National du Tourisme qui a pour mission, la promotion et le développement du Tourisme en République Démocratique du Congo ne ménagera aucun effort pour que notre pays devienne une référence pour le tourisme africain et mondial.</p>
+                         </div>
+                         <div class="about-us_footer">
+                            <span class="title_1">Madame Jolie Yombo Mukendi</span>
+                            <span>Directeur Général</span>
+                         </div>
+                     </div>
+                </div>
+            </div>
+              
+          </section>
+        <!-- ===== à propos de nous ======= -->
+
+<!-- ======section statistics -->
+<section class="try-out section">
+    <div class="container container_try-out">
+       <div class="try-out_content">
+           <div class="try-out_item try-out_1">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+           <div class="try-out_item try-out_2"></div>
+           <div class="try-out_item try-out_3">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+           <div class="try-out_item try-out_4">
+               <div class="statistics-desc-title">
+                   <span class="title_1">Statistiques du Tourisme</span>
+                 </div>
+           </div>
+           <div class="try-out_item try-out_5">
+
+               <div class="globe-container">
+                   <canvas id="globeCanvas"></canvas>
+               </div>
+
+           </div>
+           <div class="try-out_item try-out_6">
+                   
+              
+             <div class="statistics-desc-text">
+               <div class="statistics-desc-text-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur. laboriosam. Quasi unde aspernatur nesciunt accusamus 
+               </div>
+              </div>
+
+           </div>
+
+           <div class="try-out_item try-out_7">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+
+           <div class="try-out_item try-out_8">
+               
+           </div>
+
+           <div class="try-out_item try-out_9">
+               <div class="statistics-bottom-item">
+                   <div class="statistics-bottom-item-top">
+                       <span class="number" data-start="0" data-end="2002" data-duration="2000">2002</span>
+                   </div>
+                   <div class="statistics-bottom-item-btm">
+                       <span>+</span>
+                       <span class="number" data-start="0" data-end="120" data-duration="2000">120</span>
+                       <span>K</span>
+                   </div>
+               </div>
+           </div>
+       </div>
+       
+      
+    </div>
+  </section>
+         <!-- ==== projects ====================== -->
+
+          
+      <section class="section section-projects">
+        <div class="container container-projects">
+           
+            <div class="content content-projects">
+               <div class="projects-description">
+                  <div class="project-title"><span>Nos Projets</span></div>
+                  <div class="project-desc"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem Pariatur nihil voluptate ipsum quasi, illo vel! Illo repellat quod ipsum incidunt modi.</span></div>
+               </div>
+
+                <div class="project-cards">
+                    <div class="project-article-card">
+                        <div class="card-img"><div><img src="assets/images/valeur3.jpg" alt="" class="img-projects"></div></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="assets/images/Vectors/fleche-droite.svg" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-article-card">
+                        <div class="card-img"><img src="assets/images/valeur3.jpg" alt="" class="img-projects"></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="assets/images/Vectors/fleche-droite.svg" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-article-card">
+                        <div class="card-img"><img src="assets/images/valeur3.jpg" alt="" class="img-projects"></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="assets/images/Vectors/fleche-droite.svg" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-article-card">
+                        <div class="card-img"><img src="assets/images/valeur3.jpg" alt="" class="img-projects"></div>
+
+                        <div class="project-card-desc">
+                            <div>
+                                <span class="project-card-desc_icon">
+                                    <img src="assets/images/Vectors/fleche-droite.svg" alt="">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="project-card-desc-title"><span>Tourismes dans les aires protegées en RDC</span></div>
+                                <div class="projects-card-desc-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim facilis autem cumque exercitationem ipsam quis magni at, eveniet repudiandae?</div>
+                                <div class="projects-card-desc-button"><button class="projects-button"><span>Voir plus</span><span>icon</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- globe here ==================================== -->
+        <!-- <div class="globe-container">
+            <canvas id="globeCanvas"></canvas>
+        </div> -->
+    </section>
+
+     <!-- ======end projects ================== -->
+
+
+
+       
+
+        <!-- ======section contacts =========== -->
+
+         <section class="section section_contact">
+             <div class="container container_contacts">
+                 <div class="content content_contacts">
+                    <div class="contacts_left">
+                        <div class="back-cover_contact-left"></div>
+                        <div class="contact_title">
+                            <span class="title_1">Qui sommes nous ?</span>
+                        </div>
+                        <div class="contact_desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam praesentium vel eligendi dolorem a cum reiciendis ducimus illo accusantium odio sequi adipisci quos id tenetur aperiam labore, dignissimos impedit! Illum odio reprehenderit consequatur voluptas nihil fugiat officiis unde numquam?</p>
+                        </div>
+                        <div class="contact_button">
+                            <span class="contact_bttn"><a href="http://">En savoir plus > </a></span>
+                        </div>
+                    </div>
+                    <div class="contacts_right">
+                        <div class="back-cover_contact-right">
+
+                        </div>
+                        <img src="assets/images/Logos/ONT6.png" alt="" class="contacts_right-img">
+                    </div>
+                 </div>
+             </div>
+         </section>
+
+        <!-- ======section contacts =========== -->
+        <!-- start section divers -->
+        <section class="section section_diver">
+
+            <div class="container container_diver">
+
+              <div class="content-statistics-top">
+                <div class="statistics-top-items">
+                    <div class="statistics-top-icon">
+                        <img src="assets/images/Vectors/trois-directions.svg" alt="" class="statistics-icon-img">
+                    </div>
+                    <div class="statistics-top-side">
+                        <div class="statistics-top-side-top">
+                            <span>+</span>
+                            <span class="number" data-start="0" data-end="10" data-duration="2000" >10</span>
+                        </div>
+                        <div class="statistics-top-side-desc">
+                            <span>Lorem, ipsum dolor.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="statistics-top-items">
+                  <div class="statistics-top-icon">
+                      <img src="assets/images/Vectors/signal-de-direction.svg" alt="" class="statistics-icon-img">
+                  </div>
+                  <div class="statistics-top-side">
+                      <div class="statistics-top-side-top">
+                          <span>+</span>
+                          <span class="number" data-start="0" data-end="15" data-duration="2000">15</span>
+                      </div>
+                      <div class="statistics-top-side-desc">
+                          <span>Lorem, ipsum dolor. is</span>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="statistics-top-items">
+                <div class="statistics-top-icon">
+                    <img src="assets/images/Vectors/chaise-pc.svg" alt="" class="statistics-icon-img">
+                </div>
+                <div class="statistics-top-side">
+                    <div class="statistics-top-side-top">
+                        <span>+</span>
+                        <span class="number" data-start="0" data-end="35" data-duration="2000">35</span>
+                    </div>
+                    <div class="statistics-top-side-desc">
+                        <span>Lorem, ipsum dolor. is</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="statistics-top-items">
+              <div class="statistics-top-icon">
+                  <img src="assets/images/Vectors/groupe-de-personnes.svg" alt="" class="statistics-icon-img">
+              </div>
+              <div class="statistics-top-side">
+                  <div class="statistics-top-side-top">
+                      <span>+</span>
+                      <span class="number" data-start="0" data-end="7" data-duration="2000">7</span>
+                  </div>
+                  <div class="statistics-top-side-desc">
+                      <span>Lorem, ipsum dolor. is</span>
+                  </div>
+              </div>
+          </div>
+
+
+              </div>
+                 <div class="content content_diver">
+                    <div class="left_divers">
+                       <div class="left_divers_1">
+                          <img src="assets/images/Sans titre - 2.jpg" alt="" class="left_divers_1-img">
+                       </div>
+                       <div class="left_divers_2">
+                         <div class="left_divers_2-1"></div>
+                       </div>
+                    </div>
+                    <div class="right_divers">
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur ratione consectetur officiis error vitae incidunt nobis, sequi quam tempora tenetur neque deserunt amet? Error accusamus ad ullam aperiam porro?</p>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur ratione consectetur officiis error vitae incidunt nobis, sequi quam tempora tenetur neque deserunt amet? Error accusamus ad ullam aperiam porro?</p>
+                       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur ratione consectetur officiis error vitae incidunt nobis, sequi quam tempora tenetur neque deserunt amet? Error accusamus ad ullam aperiam porro?</p>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nostrum fugiat vero alias mollitia repudiandae quia neque dolorem quibusdam iure, quis dolores quae molestiae veniam perferendis optio, laboriosam beatae non.</p>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi veritatis qui numquam in at dolor, excepturi, optio quae eveniet laborum maiores suscipit? Consectetur velit suscipit, laborum voluptate obcaecati similique?</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+       <!-- end section divers -->
+
+       <!-- start section vision manageriale -->
+             <section class="section vm_section">
+                <div class="container vm_container">
+                    <div class="content vm_content">
+                        <div class="vm_desc_top">
+                            <span class="title_1">Vision Managériale pour l'année 2025</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, libero? Molestiae iure quaerat accusamus esse assumenda explicabo aut, tempora incidunt.</p>
+                            <div class="contact_button">
+                                <span class="contact_bttn"><a href="cadre-organique.html">En savoir plus > </a></span>
+                            </div>
+                        </div>
+
+                        <div class="vm_items">
+                            <div class="vm_items_container">
+                                 <span class="title_1">Promotion, Marketing and Comm.</span>
+                                 <span class="title_1">Etudes et Développement du Tourisme</span>
+                                 <span class="title_1">Partenariat</span>
+                                 <span class="title_1">Administration et Formation</span>
+                                 <span class="title_1">Finances</span>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+       <!-- end vision manageriale ========= -->
+
+       <!-- section nos valeurs ============= -->
+      
+         <sectcion class="section valeurs_section">
+            <div class="container valeurs_container">
+                  <div class="section_title">
+                    <span class="title_1">Nos valeurs</span>
+                  </div>
+                <div class="content content_valeurs">
+                    <div class="valeurs_items">
+                        <div class="valeurs_items-list"><img src="assets/images/valeur1.jpeg" alt="" class="valeurs_img"></div>
+                        <div class="valeurs_items-list">
+                            <div class="valuers_icon"><i class="fa-solid fa-people-group"></i></div>
+                            <div class="valeurs_title"><span class="title_1">Tourisme</span></div>
+                            <div class="valeurs_desc"><p>Passages, and more recently with desktop publishing software like AIdus PageMaker including versions of Lorem Ipsum</p></div>
+                        </div>
+                    </div>
+
+                    <div class="valeurs_items">
+                        <div class="valeurs_items-list"><img src="assets/images/valeur2valeur3.jpg" alt="" class="valeurs_img"></div>
+                        <div class="valeurs_items-list">
+                            <div class="valuers_icon"><i class="fa-solid fa-bullhorn"></i></div>
+                            <div class="valeurs_title"><span class="title_1">Promotion</span></div>
+                            <div class="valeurs_desc"><p>Passages, and more recently with desktop publishing software like AIdus PageMaker including versions of Lorem Ipsum</p></div>
+                        </div>
+                    </div>
+
+                    <div class="valeurs_items">
+                        <div class="valeurs_items-list"><img src="assets/images/valeur3.jpg" alt="" class="valeurs_img"></div>
+                        <div class="valeurs_items-list">
+                            <div class="valuers_icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="valeurs_title"><span class="title_1">Développement</span></div>
+                            <div class="valeurs_desc"><p>Passages, and more recently with desktop publishing software like AIdus PageMaker including versions of Lorem Ipsum</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </sectcion>  
+
+
+       <!-- end section nos valeurs ========= -->
+
+
+       <!-- ===section reseau sociaux ============ -->
+
+ <!-- ===== start infinite sliding social media icon ======= -->
+ <section class="section marquee-section">
+    <div class="marquee-container">
+        <div class="marquee">
+          <ul class="marquee-elmts">
+               <li><img src="assets/images/Vectors/Instagram-Wordmark-Logo.wine.svg" alt=""></li>
+               <li><img src="assets/images/Vectors/Facebook-Logo.wine.svg" alt=""></li>
+               <li><img class="flickr-fix-icon" src="assets/images/Vectors/Flickr-Logo.wine.svg" alt=""></li>
+               <li><img src="assets/images/Vectors/LinkedIn-Logo.wine.svg" alt=""></li>
+               <li><img src="assets/images/Vectors/TikTok-Logomark&Wordmark-Logo.wine.svg" alt=""></li>
+               <li><img src="assets/images/Vectors/YouTube-Logo.wine.svg" alt=""></li>
+               
+          </ul>
+        </div>
+    </div>
+  </section>
+  <!-- =====end infinite sliding social media icon ===========-->
+
+
+       <!-- ====section reseau sociaux ========== -->
+
+
+         <!--======start section info ========= -->
+
+         <section class="section section-actu">
+            <div class="container container-actu">
+                   <div class="title-section">
+                      <h2 class="title_1">Actualités et Infos</h2>
+                   </div>
+                <div class="content content-actu">
+                   <div class="actu-item actu-left">
+                      <div class="actu-left_title">
+                          <div class="actu-left_main-title">
+                            <span class="title_1">
+                                Prèmiere ministre Judith Suminwa recu au village de la femme
+                            </span>
+                          </div>
+                          <div class="actu-left_meta">
+                            <span class="actu-meta_author">
+                                <span>icon</span>
+                                <span>Blaise Basomboli</span>
+                            </span>
+                            <span class="actu-meta_publish-date">
+                                11,mars,2025 - kinshasa
+                            </span>
+                          </div>
+                      </div>
+                      <div class="actu-left_img">
+                         <img src="assets/images/portrait.jpg" alt="" class="actu-left_image">
+                      </div>
+                   </div>
+                   <div class="actu-item actu-right">
+                       <div class="actu-right_content">
+                          <div class="actu-right_items">
+                             <div class="actu-right_numero">01</div>
+                             <div class="actu-right_title">
+                                <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                                <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                             </div>
+                          </div>
+
+                          <div class="actu-right_items">
+                            <div class="actu-right_numero">02</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">03</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">04</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">05</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+                         <div class="actu-right_items">
+                            <div class="actu-right_numero">06</div>
+                            <div class="actu-right_title">
+                               <div class="actu-right_main-title">Ministre Judith Suminwa</div>
+                               <div class="actu-right_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad.</div>
+                            </div>
+                         </div>
+
+
+                       </div>
+                   </div>
+                </div>
+            </div>
+          </section>
+
+
+       <!-- end section actualités de l'office ====== -->
+
+       <!-- ========essaie============ -->
+<!-- 
+         <section class="section section-globe">
+            <div class="globe-container">
+              <canvas id="globeCanvas"></canvas>
+            </div>
+         </section> -->
+       <!-- ==================== -->
+         <!--== start section nos partennaires ===-->
+
+         <section class="section section-partennaires">
+            <div class="container container-partennaires">
+              <div class="title-section">
+                  <h2 class="title_1">Nos Partenaires</h2>
+               </div>
+              <div class="content content-partennaires">
+                  <div class="partennaires-items">
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/amazon.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/apple.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/google.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/hp.png" alt="" class="partennaires-img">
+                       </div>
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/hyundai.png" alt="" class="partennaires-img">
+                       </div>
+                  </div>
+                  <div class="partennaires-items">
+                     
+                      <div class="partennaires-item">
+                          <img src="assets/images/partennaires/netflix.png" alt="" class="partennaires-img">
+                       </div>
+
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/vodacom-seeklogo.png" alt="" class="partennaires-img">
+                       </div>
+
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/airtel.png" alt="" class="partennaires-img">
+                       </div>
+
+                       <div class="partennaires-item">
+                          <img src="assets/images/partennaires/totalenergies-seeklogo.png" alt="" class="partennaires-img">
+                       </div>
+
+                  </div>
+              </div>
+            </div>
+        </section>
+
+       <!-- == end section nos partennaires === -->
+
+
+      
+    </main>
+    <footer class="footer">
+        <section class="section footer-section">
+            <div class="container container-footer">
+                <div class="content content-footer">
+                    <div class="top-footer">
+
+                      <div class="top-footer-items">
+                        <div class="top-footer-title">
+                           <span class="title_1"></span>
+                        </div>
+                        <div class="top-footer-item">
+                            <img class="top-footer-item-img" src="assets/images/Logos/ONT3.png" alt="">
+                        </div>
+                    </div>
+
+
+                       <div class="top-footer-items">
+                           <div class="top-footer-title">
+                              <span class="title_1">Lorem, ipsum dolor.</span>
+                           </div>
+                           <div class="top-footer-item">
+                               <div class="top-footer-links">
+                                 <a href="" class="top-footer-link">Lorem, ipsum.</a>
+                               </div>
+ 
+                               <div class="top-footer-links">
+                                 <a href="" class="top-footer-link">Lorem, ipsum dolor.</a>
+                               </div>
+ 
+                               <div class="top-footer-links">
+                                 <a href="" class="top-footer-link">Lorem ipsum dolor sit amet.</a>
+                               </div>
+                           </div>
+                       </div>
+ 
+                       <div class="top-footer-items">
+                         <div class="top-footer-title">
+                            <span class="title_1">Lorem, ipsum dolor.</span>
+                         </div>
+                         <div class="top-footer-item">
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum dolor.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem ipsum dolor sit amet.</a>
+                             </div>
+                         </div>
+                     </div>
+ 
+                     <div class="top-footer-items">
+                         <div class="top-footer-title">
+                            <span class="title_1">Lorem, ipsum dolor.</span>
+                         </div>
+                         <div class="top-footer-item">
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem, ipsum dolor.</a>
+                             </div>
+ 
+                             <div class="top-footer-links">
+                               <a href="" class="top-footer-link">Lorem ipsum dolor sit amet.</a>
+                             </div>
+                         </div>
+                     </div>
+ 
+                    </div>
+                    <div class="bottom-footer">
+                        <div class="footer-bottom-items">
+                           <span class="footer-bottom-link">Power by Office National du Tourisme</span>
+                        </div>
+                        <div class="footer-bottom-items">
+                         <span class="footer-bottom-link">Copyright 2025, all right reserved</span>
+                        </div>
+                        <div class="footer-bottom-items">
+                            <span class="top_logo"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="top_logo"><i class="fa-brands fa-x-twitter"></i></span>
+                            <span class="top_logo"><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </footer>
+<!-- js script -->
+
+<!-- swiper script -->
+    <script type="module" src="assets/js/script.js"></script>
+    
+
+</body>
+</html>
