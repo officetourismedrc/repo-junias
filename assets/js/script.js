@@ -237,6 +237,10 @@ if(document.querySelector('.hero_section') !==  null){
   const logoContainer = document.querySelector('.logo-img');
   const menuBurger = document.querySelector('.open-menu span img');
 
+  const assetLogoColor = new URL('../images/Logos/ONT1.svg', import.meta.url).href;
+  const assetLogoBlackWhite = new URL('../images/Logos/ONT6.svg', import.meta.url).href;
+  const assetBurgerColor = new URL('../images/icons/menu-burger-blue.png', import.meta.url).href;
+  const assetBurgerWhite = new URL('../images/icons/menu-burger-white.png', import.meta.url).href;
   // Register ScrollTrigger plugin
         // Create flip animation timeline
   const tl = gsap.timeline({
@@ -256,13 +260,13 @@ function colorChangeMenuReverse(){
 }
 function colorChangeMenuLogo(){
   navBarFlip.classList.add('color-change');
-  logoContainer.src = '/repo-junias/assets/images/Logos/ONT1.svg';
-  menuBurger.src = '/repo-junias/assets/images/icons/menu-burger-blue.png';
+  logoContainer.src = assetLogoColor;  // '/repo-junias/assets/images/Logos/ONT1.svg';
+  menuBurger.src = assetBurgerColor;//'/repo-junias/assets/images/icons/menu-burger-blue.png';
 }
 function colorChangeMenuReverseLogo(){
   navBarFlip.classList.remove('color-change');
-  logoContainer.src = '/repo-junias/assets/images/Logos/ONT6.svg';
-  menuBurger.src = '/repo-junias/assets/images/icons/menu-burger-white.png';
+  logoContainer.src =  assetLogoBlackWhite;   //'/repo-junias/assets/images/Logos/ONT6.svg';
+  menuBurger.src = assetBurgerWhite;//'/repo-junias/assets/images/icons/menu-burger-white.png';
 }
 //   tl.to(logoFlip,{
 //       rotationX: 360,

@@ -775,9 +775,9 @@ display: none;
     }
     .about-us_left{
         border-radius: 1.5rem;
-        /* overflow: hidden; */
+        overflow: hidden;
         height: 100%;
-        /* max-height: 65vh; */
+        max-height: 65vh;
         overflow: hidden;
        
         
@@ -2101,7 +2101,7 @@ justify-items: left;
 
 
 .about-us_right{
-  background-color: green;
+  /* background-color: green; */
 }
 
 
@@ -2127,7 +2127,7 @@ justify-items: left;
 
 
   .about-us_right{
-    background-color: red;
+    /* background-color: red; */
   }
 
   .content_about-us{
@@ -2431,7 +2431,7 @@ justify-items: left;
 
 
     .about-us_right{
-      background-color: yellow;
+      /* background-color: yellow; */
     }
     .content_about-us{
       display: grid;
